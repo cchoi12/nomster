@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'devise', '>= 3.4.1'
 gem 'geocoder', '1.3.4'
 gem 'figaro', '>= 1.0.0'
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
