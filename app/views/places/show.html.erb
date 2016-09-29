@@ -85,7 +85,7 @@
 
 
 
-<% @place.photos.each do |photo| %>
+<%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
   <div class="place-images col-xs-12 col-sm-6">
     <%= image_tag photo.picture %>
     <div class="clear"></div>
