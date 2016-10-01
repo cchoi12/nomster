@@ -85,11 +85,13 @@
 
 
 
-<%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
-  <div class="place-images col-xs-12 col-sm-6">
-    <%= image_tag photo.picture %>
-    <div class="clear"></div>
-    <%= photo.caption %>
+<% @place.photos.each do |photo| %>
+  <div class="col-xs-12 col-sm-6">
+    <blockquote>
+      <b><%= image_tag photo.picture %></b>
+      <br />
+      <b><%= photo.caption %></b>
+    </blockquote>
   </div>
 <% end %>  
 
@@ -102,10 +104,10 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add a Photo</h4>
       </div>
-      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+      <div class='modal-body'>
 
-       <div class='modal-body'>
-        <%=f.input :photo, as: :file %>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <%=f.input :picture %>
         <%=f.input :caption %>
         </div>
         <div class='modal-footer'>
@@ -116,9 +118,10 @@
     </div>
   </div>
 </div>
-
+<!--Photo button -->
 <div class="col-xs-10 col-xs-offset-1"
   <h1 class="pull-left">Photos</h1>
+  <!--Trigger Model -->
   <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target = "#myPhotoModal">
   Add a Photo
   </button>
