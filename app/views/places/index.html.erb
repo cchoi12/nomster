@@ -8,6 +8,7 @@
         <small><%= place.user.email %></small>
     <% end %>
   </div>
+
  <% if place.comments.present? %>
   <div class="col-xs-12 col-xs-offset-1">
     <blockquote>
@@ -20,6 +21,15 @@
  <% end %>
   </div>
 
+<% if place.photos.present? %> 
+  <div class="col-xs-12 col-xs-offset-1">
+    <blockquote> 
+    <% if place.photos.last.picture.present? %> 
+      <b><%= image_tag place.photos.last.picture, :class => 'img-default-size' %></b> 
+    <% end %> 
+    </blockquote>
+  </div>
+<% end %> 
 
 <%= will_paginate @places, renderer: BootstrapPagination::Rails %>
 <% end %>
