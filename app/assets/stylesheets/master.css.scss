@@ -27,6 +27,7 @@ body {
   background:url('/assets/photography.png');
   border-radius: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom:0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -77,9 +78,15 @@ blockquote p {
 }
 
 .carousel-caption {
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
+  font-size: 40px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 100;
+  text-shadow: rgba(0,0,0,0.95) 2px 2px;
+  background-color: rgba(0, 0, 0, 0.10);
+  width:100%;
+  position:absolute;
+  left:0;
+
 }
 
 .crop {
@@ -87,7 +94,18 @@ blockquote p {
  width: 400px;
  overflow: hidden;
 }
+
 .crop img {
  height: auto;
  width: 400px;
 }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  max-height: 550px;
+  width: 100%;
+}
+
+.carousel {
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+

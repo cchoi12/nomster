@@ -1,3 +1,4 @@
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -7,27 +8,21 @@
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner col-xs-offset-2">
+  <div class="carousel-inner">
     <div class="item active">
-      <li class="crop">
-      <%= image_tag 'slider1.jpg' %>
-      </li>
+      <%= image_tag 'slider1.jpg', class: 'img-responsive' %>
       <div class="carousel-caption">
         Delicious food across Los Angeles
       </div>
     </div>
     <div class="item">
-      <li class="crop">
-      <%= image_tag 'slider2.jpg' %>
-      </li>
+      <%= image_tag 'slider2.jpg', class: 'img-responsive' %>
       <div class="carousel-caption">
         Montrose is bomb.
       </div>
     </div>
     <div class="item">
-      <li class="crop">
-      <%= image_tag 'slider3.jpg' %>
-      </li>
+      <%= image_tag 'slider3.jpg', class: 'img-responsive' %>
       <div class="carousel-caption">
         The Rising Sun.
       </div>
